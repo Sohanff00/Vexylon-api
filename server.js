@@ -15,6 +15,9 @@ app.use('/api', authRoutes);
 const userRoutes = require('./routes/user');
 app.use('/api', userRoutes);
 
+const balanceRoutes = require('./routes/balance');
+app.use('/api', balanceRoutes);
+
 // 🌐 MongoDB Connect
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
