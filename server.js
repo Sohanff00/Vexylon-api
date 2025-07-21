@@ -18,6 +18,8 @@ app.use('/api', userRoutes);
 const balanceRoutes = require('./routes/balance');
 app.use('/api', balanceRoutes);
 
+const User = require('./models/User');
+
 // 🌐 MongoDB Connect
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
